@@ -1,28 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | QR code component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | QR code component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        * {
+            font-size: inherit;
+            text-align: inherit;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            --scale: 1.25;
+            --width-size: calc(320px * var(--scale));
+            --ratio: calc(288 / 320);
+            --white: hsl(0, 0%, 100%);
+            --light-gray: hsl(212, 45%, 89%);
+            --grayish-blue: hsl(220, 15%, 55%);
+            --dark-blue: hsl(218, 44%, 22%);
+        }
+
+        html {
+            font-size: 17px;
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            background-color: var(--light-gray);
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        figure {
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 1;
+            align-items: center;
+            max-width: var(--width-size);
+            gap: 1rem;
+        }
+
+        img {
+            max-width: calc(var(--width-size) * var(--ratio));
+            border-radius: 0.8rem;
+        }
+
+        body {
+            display: grid;
+            min-height: 100vh;
+            justify-items: center;
+            align-items: center;
+        }
+
+        #text-wrapper {
+            padding: 0 2rem 0 2rem;
+            text-align: center;
+            display: grid;
+            gap: 1rem;
+        }
+
+        figcaption {
+            color: var(--grayish-blue)
+        }
+    </style>
 </head>
+
 <body>
-
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <figure>
+        <img src="images/image-qr-code.png" />
+        <div id="text-wrapper">
+            <h1>Improve your front-end skills by building projects</h1>
+            <figcaption>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+                <figcaption>
+        </div>
+    </figure>
 </body>
+
 </html>
